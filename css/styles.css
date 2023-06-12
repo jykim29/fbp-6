@@ -1,0 +1,236 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+.wrapper {
+  width: 100%;
+  height: 800px;
+  position: relative;
+}
+
+/* Flexbox Layout */
+.outer-container {
+  width: 1250px;
+  height: 700px;
+  position: absolute;
+  background-color: hsl(240, 78%, 98%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('../images/bg-top.svg'), url('../images/bg-bottom.svg');
+  background-size: 300px, 300px;
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
+  box-shadow: 0px 5px 20px hsl(234, 14%, 74%);
+}
+.inner-container {
+  width: 950px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.top {
+  flex-basis: 25%;
+  text-align: center;
+}
+.bottom {
+  flex-basis: 75%;
+}
+
+/* Heading */
+.top h1 {
+  font-size: 25px;
+  margin-bottom: 35px;
+  color: hsl(233, 13%, 49%);
+}
+.top span {
+  color:  hsl(234, 14%, 74%);
+  height: 30px;
+  display: inline-block;
+}
+
+/* Toggle Button */
+#button {
+  width: 50px;
+  height: 30px;
+  margin: 0px 20px;
+  border: none;
+  border-radius: 15px;
+  vertical-align: middle;
+  background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  padding: 1px 0px 0px 4px;
+  transition: all 0.1s ease-in-out;
+}
+.toggle-btn {
+  padding: 1px 0px 0px 23px !important;
+  transition: all 0.1s ease-in-out;
+}
+#button:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+#button div {
+  width: 23px;
+  height: 23px;
+  border: none;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* Price Flexbox Layout */
+.bottom {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.left {
+  flex-basis: 33.3333%;
+}
+.mid {
+  flex-basis: 33.3333%;
+}
+.right {
+  flex-basis: 33.3333%;
+}
+
+/* Side Small Box */
+.small div {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  box-shadow: 0px 5px 20px hsl(234, 14%, 74%);
+  padding: 25px;
+  text-align: center;
+  color: hsl(233, 13%, 49%);
+}
+
+/* Center Big Box */
+.big div {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 20px hsl(234, 14%, 74%);
+  padding: 48px 25px;
+  text-align: center;
+  color: white;
+}
+
+/* Price Title */
+.title {
+  margin: 0;
+}
+.price, .price-big {
+  font-size: 60px;
+  margin: 10px 0px 10px 0px;
+  color: hsl(232, 13%, 33%);
+}
+.price-big {
+  color: white;
+}
+.dollar {
+  display: inline-block;
+  font-size: 35px;
+  vertical-align: middle;
+  margin-right: -8px;
+  margin-bottom: 10px;
+}
+
+/* List */
+.list {
+  list-style: none;
+  padding: 1px;
+}
+hr {
+  margin: 0;
+}
+.list li {
+  margin: 15px 0px;
+  font-size: 14px;
+}
+
+/* Learn More Button */
+.side-button, .center-button {
+  width: 266px;
+  height: 45px;
+  border: none;
+  background: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 10px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-top: 15px;
+}
+.center-button {
+  background: white;
+  color: hsl(237, 63%, 64%);
+}
+.side-button:hover {
+  color: hsl(237, 63%, 64%);
+  border: 1px solid hsl(237, 63%, 64%);
+  background: transparent;
+  cursor: pointer;
+}
+.center-button:hover {
+  color: white;
+  border: 1px solid white;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 820px) {
+  .wrapper {
+    width: 100%;
+    height: 1550px;
+    position: relative;
+  }
+  /* Flexbox Layout */
+  .outer-container {
+    width: 375px;
+    height: 1500px;
+    background-position: 210px -20px, bottom left;
+  }
+  .inner-container {
+    width: 330px;
+    height: 1400px;
+  }
+  .top {
+    flex-basis: 10%;
+    text-align: center;
+  }
+  .bottom {
+    flex-basis: 90%;
+  }
+  /* Price Flexbox Layout */
+.bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Center Big Box */
+.big div {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 25px;
+}
+/* Learn More Button */
+.side-button, .center-button {
+  width: 280px;
+}
+
+}
